@@ -10,7 +10,7 @@ class Chessboard {
   barisPion(warna) {
     let indexWarna = 0;
     indexWarna = warna == 'hitam' ? 0 : 1
-    console.log(warna, indexWarna);
+    // console.log(warna, indexWarna);
     let baris = []
     for (let i = 0; i < 7; i++) {
       baris.push(this.pemain[5] + ' ' + this.warna[indexWarna])
@@ -44,7 +44,7 @@ class Chessboard {
 
   makeChessboard(){
     for (let i = 0; i <= 7; i++) {
-      console.log("----------",i);
+      // console.log("----------",i);
       switch (i) {
         case 0:
         this.barisBelakang('hitam')
@@ -73,3 +73,4 @@ class Chessboard {
 let chess = new Chessboard()
 chess.makeChessboard()
 console.log(chess.chessboard);
+console.log(chess.chessboard[1][2]);
