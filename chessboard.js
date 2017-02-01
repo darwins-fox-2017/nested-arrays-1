@@ -5,10 +5,10 @@ var chessboard = [];
 var catur=['Benteng','Kuda','Menteri','Raja','Ratu','Menteri','Kuda','Benteng']
 var pion =['pion','pion','pion','pion','pion','pion','pion','pion']
 
-for(var i=0; i<8;i++){
+for(var i=0; i<8; i++){
       var papan= [ ];
       chessboard.push(papan);
-        for(var j=0; j<catur.length;j++){
+        for(var j=0; j<8; j++){
 
           if(i===0){
             chessboard[i].push(catur[j]+ " hitam");
@@ -25,8 +25,9 @@ for(var i=0; i<8;i++){
           if(i===7){
             chessboard[i].push(catur[j]+ " putih");
           }
+
         }
       }
 
 // console.log(papan);
-console.log(chessboard);
+console.log(chessboard[7][0]);
