@@ -8,19 +8,27 @@ const makeChessboard = () => {
 
   for(let i = 0; i < sizeBoard; i++ ){
     let arrIndex = []
+
+
+
+
+
     for (let j = 0; j < sizeBoard; j++) {
-      if (i === 0 || i === 7) {
-        if(i === 0){
+      switch (i) {
+        case 0:
           arrIndex.push(chess[j] + " Hitam")
-        }else {
+          break;
+        case 7:
           arrIndex.push(chess[j] + " Putih")
-        }
-      }else if (i === 1 || i === 6) {
-        if (i === 1) {
+          break;
+        case 1:
           arrIndex.push(pion + " Hitam")
-        }else {
+          break;
+        case 6:
           arrIndex.push(pion + " Putih")
-        }
+          break;
+        default:
+          arrIndex.push('')
       }
     }
     chessBoard.push(arrIndex)
