@@ -32,9 +32,10 @@ const makeChessboard = () => {
 
 // console.log(makeChessboard());
 const printBoard = chessboard => {
-  console.log(chessboard[7][0] == "Benteng Putih")
-  // ... write your code here
-  console.log(chessboard);
+  return chessboard
 }
 
-printBoard(makeChessboard())
+let chessboard = printBoard(makeChessboard())
+
+console.log(chessboard)
+console.log(chessboard[7][0] == "Benteng Putih")
