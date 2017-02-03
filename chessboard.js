@@ -10,19 +10,42 @@ const makeChessboard = () => {
   for(let i=0; i<8; i++){
     chessboard[i] = []
     for(let j=0; j<8; j++){
-      if(i == 0 || i == 1){
-        if(i == 0){
+      switch (i) {
+        case 0:
           chessboard[i].push(`${bidak[j]} ${warna[0]}`)
-        }else {
+          break;
+
+        case 1:
           chessboard[i].push(`Pion ${warna[0]}`)
-        }
-      }else if(i == 6 || i == 7){
-        if(i == 7){
-          chessboard[i].push(`${bidak[j]} ${warna[1]}`)
-        }else {
+          break;
+
+        case 6:
           chessboard[i].push(`Pion ${warna[1]}`)
-        }
-      }else {chessboard[i].push(" ")}
+          break;
+
+        case 7:
+          chessboard[i].push(`${bidak[j]} ${warna[1]}`)
+          break;
+
+        default:
+          chessboard[i].push(" ")
+
+      }
+      // if(i == 0 || i == 1){
+      //   if(i == 0){
+      //     chessboard[i].push(`${bidak[j]} ${warna[0]}`)
+      //   }else {
+      //     chessboard[i].push(`Pion ${warna[0]}`)
+      //   }
+      // }else if(i == 6 || i == 7){
+      //   if(i == 7){
+      //     chessboard[i].push(`${bidak[j]} ${warna[1]}`)
+      //   }else {
+      //     chessboard[i].push(`Pion ${warna[1]}`)
+      //   }
+      // }else {
+      //   chessboard[i].push(" ")
+      // }
     }
   }
 
